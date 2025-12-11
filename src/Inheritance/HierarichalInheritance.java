@@ -2,19 +2,19 @@ package Inheritance;
 
 class Vehicle{
     Vehicle(){
-        System.out.println("Inheritance.Vehicle honks");
+        System.out.println("Vehicle honks");
     }
 }
 
 class Bus extends Vehicle{
     Bus(){
-        System.out.println("Inheritance.Bus honks");
+        System.out.println("Bus honks");
     }
 }
 
 class Car extends Vehicle{
     Car(){
-        System.out.println("Inheritance.Car honks");
+        System.out.println("Car honks");
     }
 }
 

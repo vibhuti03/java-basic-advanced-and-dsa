@@ -2,22 +2,22 @@ package Inheritance;
 
 class Animals{
     Animals(){
-        System.out.println("Inheritance.Animals makes sound");
+        System.out.println("Animals makes sound");
     }
 }
 
 class Mammals extends Animals{
     Mammals(){
-        //by default the Inheritance.Animals() constructor is called here
-        System.out.println("Inheritance.Mammals makes sound");
+        //by default the Animals() constructor is called here
+        System.out.println("Mammals makes sound");
     }
 }
 
 class Dogs extends Mammals{
     String dogSound = "woof";
     Dogs(){
-        //by default the Inheritance.Animals() & Inheritance.Mammals() constructors is called here
-        System.out.println("Inheritance.Dogs makes "+dogSound);
+        //by default the Animals() & Mammals() constructors is called here
+        System.out.println("Dogs makes "+dogSound);
     }
 
 }
