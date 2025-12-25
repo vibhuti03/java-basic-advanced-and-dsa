@@ -3,16 +3,17 @@ package DataStructuresImplementation.Stack;
 public class StackImplementation implements Stack{
     private String[] stack;
     int top = -1; //Empty stack
-
+    private static int MAX_SIZE;
 
     StackImplementation(int size){
-        stack = new String[size];
+        MAX_SIZE = size;
+        stack = new String[MAX_SIZE];
     }
 
 
     @Override
     public void push(String item) {
-        if(top> stack.length){
+        if(top> MAX_SIZE){
             return;
         }
         else{
@@ -24,7 +25,7 @@ public class StackImplementation implements Stack{
 
     @Override
     public String pop() {
-        if (top<0){
+        if (isEmpty()){
             return "Pop - Stack empty";
         }
         else{
@@ -39,7 +40,7 @@ public class StackImplementation implements Stack{
 
     @Override
     public String peek() {
-        if (top<0){
+        if (isEmpty()){
             return "Peek - Stack empty";
         }
         return stack[top];
@@ -54,6 +55,6 @@ public class StackImplementation implements Stack{
 
     @Override
     public int size() {
-        return top;
+        return top+1;
     }
 }
