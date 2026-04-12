@@ -1,15 +1,16 @@
 package DataStructuresImplementation.Trees.BinaryTree;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
 class Node{
-    char data;
+    int data;
     Node left;
     Node right;
 
-    Node(char data){
+    Node(int data){
         this.data = data;
         left = null;
         right = null;
@@ -23,9 +24,9 @@ public class BinaryTreeImplementation implements BinaryTree {
     @Override
     public Node createTree() {
         System.out.print("Enter value - ");
-        char value = sc.next().charAt(0);
+        int value = sc.nextInt();
 
-        if(value == 'X')
+        if(value == -1)
             return null;
 
         Node root = new Node(value);
@@ -110,5 +111,36 @@ public class BinaryTreeImplementation implements BinaryTree {
             if(current.right!=null)
                 queue.add(current.right);
         }
+    }
+
+    @Override
+    public int heightOfBinaryTree(Node root) {
+        if(root==null)
+            return 0;
+        return 1 + Math.max(heightOfBinaryTree(root.left),heightOfBinaryTree(root.right));
+        //1 is added for taking into account current node
+    }
+
+    @Override
+    public int sizeOfBinaryTree(Node root) {
+        if(root==null)
+            return 0;
+        return 1 + sizeOfBinaryTree(root.left)+sizeOfBinaryTree(root.right);
+        //1 is added for taking into account current node
+    }
+
+    @Override
+    public List<Integer> findMinMaxValue(Node root) {
+        if(root==null)
+            return List.of(Integer.MAX_VALUE, Integer.MIN_VALUE);
+
+        int minValue = Math.min(root.data,
+                                    Math.min(findMinMaxValue(root.left).get(0),
+                                             findMinMaxValue(root.right).get(0)));
+        int maxValue = Math.max(root.data,
+                                Math.max(findMinMaxValue(root.left).get(1),
+                                         findMinMaxValue(root.right).get(1)));
+
+        return List.of(minValue,maxValue);
     }
 }
