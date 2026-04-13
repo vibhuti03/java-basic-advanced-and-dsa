@@ -2,7 +2,7 @@ package Recursion;
 
 import java.util.Arrays;
 
-public class SwapArray {
+public class SwapArrayEasy {
     static void swap(int i, int j, int[] arr){
         int temp = arr[i];
         arr[i] = arr[j];
@@ -21,7 +21,7 @@ public class SwapArray {
     static void swapArraySinglePointer(int i, int[] arr){
         int n = arr.length;
 
-        if(i==(n/2)){
+        if(i>=(n/2)){
             System.out.println(Arrays.toString(arr));
             return;
         }
@@ -30,7 +30,7 @@ public class SwapArray {
 
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1,2,3,4,5,6};
 
         int left = 0, right = arr.length-1;
         swapArrayTwoPointer(left, right, arr); // => [6,5,4,3,2,1]
