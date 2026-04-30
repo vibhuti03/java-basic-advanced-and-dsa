@@ -1,4 +1,4 @@
-package Inheritance;
+package OOPs.Inheritance;
 
 class Animal{
     Animal(){

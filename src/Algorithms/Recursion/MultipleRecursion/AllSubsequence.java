@@ -1,4 +1,4 @@
-package Recursion.MultipleRecursion;
+package Algorithms.Recursion.MultipleRecursion;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ public class AllSubsequence {
         subsequence.add(arr.get(ind));
         getAllSubsequences(ind+1, subsequence);
 
-        subsequence.remove(subsequence.size()-1);
+//        subsequence.remove(subsequence.size()-1);
         getAllSubsequences(ind+1, subsequence);
     }
 

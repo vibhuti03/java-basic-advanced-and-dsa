@@ -1,4 +1,4 @@
-package Recursion.MultipleRecursion;
+package Algorithms.Recursion.MultipleRecursion;
 
 public class FibonacciEasy {
     static int fibonacci(int n){

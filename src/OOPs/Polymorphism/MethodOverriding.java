@@ -1,4 +1,4 @@
-package Polymorphism;
+package OOPs.Polymorphism;
 
 class Animal{
     void makeSound(){

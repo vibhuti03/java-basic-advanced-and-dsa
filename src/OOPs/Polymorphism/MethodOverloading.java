@@ -1,4 +1,4 @@
-package Polymorphism;
+package OOPs.Polymorphism;
 
 class SumCalculator{
     int sum(int a, int b){

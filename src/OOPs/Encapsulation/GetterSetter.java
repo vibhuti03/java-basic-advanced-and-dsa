@@ -1,4 +1,4 @@
-package Encapsulation;
+package OOPs.Encapsulation;
 
 class Animal{
     private String name; //private hence won't be accessible directly, outside the class

@@ -1,4 +1,4 @@
-package Recursion.FunctionalRecursion;
+package Algorithms.Recursion.FunctionalRecursion;
 
 public class PalindromicStringEasy {
     static boolean checkPalindrome(int i, String s){

@@ -1,4 +1,4 @@
-package Recursion.FunctionalRecursion;
+package Algorithms.Recursion.FunctionalRecursion;
 
 import java.util.Arrays;
 
